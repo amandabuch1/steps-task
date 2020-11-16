@@ -29,7 +29,7 @@ const NewComment =()=>{
             <input type='text' value={commentTitle} required onChange={(e)=>{setCommentTitle(e.target.value)}}/>
             <label className='inputTitles'>Body:</label>
             <input type='text' required value={commentBody} onChange={(e)=>{setCommentBody(e.target.value)}}/>
-            <input type='submit' value='Send' className="sendButton"/>
+            <input type='submit' value='Send' className="button"/>
         </form>
     )
 }

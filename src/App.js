@@ -4,14 +4,18 @@ import NewComment from './components/NewComment'
 
 function App() {
   const[comments, setComments] = useState([])
+  const [startIndex, setStartIndex] = useState(0);
+
   useEffect(() => {
+    // start and limit are query params
     // start is the number of rounds
-    // limit refers to how many i want to get
-    fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=20')
+    // limit referese to how many i want to get
+    fetch(`https://jsonplaceholder.typicode.com/posts?_start=${startIndex}&_limit=20`)
     .then((response) => response.json())
     // setting json into comments state
-    .then((json) => setComments(json))
-  }, []);
+    .then((json) => setComments(comments.concat(json)))
+    // eslint-disable-next-line
+  }, [startIndex]);
 
   // console.log(comments)
 
@@ -34,8 +38,12 @@ function App() {
         <div className='col body header'>Body</div>
       </div>
       {renderComments()}
+      <div>
+        { startIndex < 80 && <button className='button' node="button" waves="light" onClick={()=>{setStartIndex(startIndex+20)}}>View More</button> }
+      </div>
     </div>
   );
 }
+
 export default App;
 
