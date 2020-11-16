@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: Helvetica, sans-serif;
+  margin: 20px 0px;
 }
 
 
@@ -21,7 +23,6 @@
 
 .id {
   width: 5%;
-  font-family: Helvetica, sans-serif;
   font-weight: bolder;
   text-align: center;
   
@@ -29,13 +30,11 @@
 
 .title {
   width: 30%;
-  font-family: Helvetica, sans-serif;
   font-weight: bolder;
 }
 
 .body{
   width: 65%;
-  font-family: Helvetica, sans-serif;
   font-weight: 300;
 }
 
@@ -46,4 +45,19 @@
   color: cornflowerblue;
 }
 
+.inputTitles{
+  padding: 10px 5px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 16px;
 
+}
+
+.sendButton{
+  border-radius: 5px;
+  margin:5px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 3px;
+  border: cornflowerblue solid 2px;
+}

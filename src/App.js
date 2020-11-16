@@ -1,5 +1,6 @@
 import './App.css';
 import {useState, useEffect} from 'react';
+import NewComment from './components/NewComment'
 
 function App() {
   const[comments, setComments] = useState([])
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <NewComment/>
       <div className='row' >
         <div className='col id header'>ID</div>
         <div className='col title header'>Title</div>
